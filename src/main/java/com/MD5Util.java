@@ -17,8 +17,8 @@ public class MD5Util {
                                        String secretKey) {
         String mysign = "";
         try {
-            String prestr =  com.StringUtil.createLinkString(sArray); // 把数组所有元素，按照“参数=参数值”的模式用“&”字符拼接成字符串
-            prestr = prestr + "&secret_key=" + secretKey; // 把拼接后的字符串再与安全校验码连接起来
+            String prestr =  com.StringUtil.createLinkString(sArray);
+            prestr = prestr + "&secret_key=" + secretKey;
             mysign = getMD5String(prestr);
         } catch (Exception e) {
             e.printStackTrace();
